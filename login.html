@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcão WEB - Acesso</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+  <div class="login-page">
+    
+    <div class="login-page-box">
+      <a href="index.html" class="button-back">
+        <span style="font-size: 14px; margin-right: 4px;">⬅️</span> Voltar
+      </a>
+      
+      <div class="login-page-card">
+        <div class="login-page-header">
+          <div class="logo-row" style="margin-bottom:20px">
+            <div class="logo-box">
+              <span style="font-size: 18px;">🍃</span>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <span>Parcão <span style="color:#2E7D32;font-weight:400">WEB</span></span>
+              <span style="font-size: 11px; color: #9CA3AF; margin-top: 2px;">um projeto por Olivia D.S</span>
+            </div>
+          </div>
+          
+          <div class="login-page-header-log">
+            <button type="button" class="login-page-header-button" id="tab-login-button">Entrar</button>
+            <button type="button" class="login-page-header-button" id="tab-register-button">Criar Conta</button>
+          </div>
+        </div>
+        
+        <div class="login-page-body">
+          <form id="form-login">
+            <div class="login-page-container">
+              <label>E-mail</label>
+              <div class="login-page-input-wrapper">
+                <span style="position: absolute; left: 13px; pointer-events: none; font-size: 16px;">📧</span>
+                <input type="email" id="login-email" placeholder="seu@email.com" required/>
+              </div>
+            </div>
+            <div class="login-page-container">
+              <label>Senha</label>
+              <div class="login-page-input-wrapper">
+                <span style="position: absolute; left: 13px; pointer-events: none; font-size: 16px;">🔒</span>
+                <input type="password" id="login-password" placeholder="••••••••" required/>
+              </div>
+            </div>
+            <button type="submit" class="green-button" id="li-submit">Entrar</button>
+            <p class="login-page-card-footer">Não tem conta? <a href="login.html?tab=register" class="button-link">Criar conta</a></p>
+          </form>
+
+          <form id="form-register" style="display:none;">
+            <div class="login-page-container">
+              <label>Nome completo</label>
+              <div class="login-page-input-wrapper">
+                <span style="position: absolute; left: 13px; pointer-events: none; font-size: 16px;">👤</span>
+                <input type="text" id="register-name" placeholder="Felipe Schneider" required/>
+              </div>
+            </div>
+            <div class="login-page-container">
+              <label>E-mail</label>
+              <div class="login-page-input-wrapper">
+                <span style="position: absolute; left: 13px; pointer-events: none; font-size: 16px;">📧</span>
+                <input type="email" id="register-email" placeholder="seu@email.com" required/>
+              </div>
+            </div>
+            <div class="login-page-container">
+              <label>Senha</label>
+              <div class="login-page-input-wrapper">
+                <span style="position: absolute; left: 13px; pointer-events: none; font-size: 16px;">🔒</span>
+                <input type="password" id="register-password" placeholder="Mínimo 6 caracteres" required/>
+              </div>
+            </div>
+            <button type="submit" class="button-orange-full" id="rg-submit">Criar Conta</button>
+            <p class="login-page-card-footer">Já tem conta? <a href="login.html" class="button-link">Entrar</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

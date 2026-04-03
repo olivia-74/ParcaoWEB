@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcão WEB - Reservar Quadra</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script> 
+</head>
+<body style="background: #F4F6F8;">
+  
+  <div class="reservation-page">
+    <a href="dashboard.html" class="button-back-dark">
+      <span style="font-size: 14px; margin-right: 4px;">⬅️</span> Voltar
+    </a>
+    
+    <h1 class="page-title">Reservar <span id="nome-quadra-reserva" style="color: #2E7D32;">Quadra</span></h1>
+    <p class="page-subtitle">Preencha os detalhes abaixo para garantir o seu horário no Parcão.</p>
+    
+    <form id="form-reserve" style="margin-top: 24px;">
+
+      <div class="reservation-form-container">
+        <div class="reservation-title">
+          <div class="reservation-icon" style="background:rgba(46,125,50,.1)">
+            <span style="font-size: 15px;">🕒</span>
+          </div>
+          Duração da reserva
+        </div>
+        <div class="reservation-duration-grid" id="reservation-duration-grid">
+          <button type="button" class="reservation-duration-button" data-val="0.5">30 min</button>
+          <button type="button" class="reservation-duration-button on" data-val="1">1 hora</button>
+          <button type="button" class="reservation-duration-button" data-val="1.5">1h 30min</button>
+          <button type="button" class="reservation-duration-button" data-val="2">2 horas</button>
+        </div>
+        <input type="hidden" id="reserv-duration" value="1">
+      </div>
+      <div class="reservation-form-container">
+        <div class="reservation-title">
+          <div class="reservation-icon" style="background:rgba(21,101,192,.1)">
+            <span style="font-size: 15px;">👥</span>
+          </div>
+          Jogadores
+        </div>
+        <div class="reservation-toggle-row">
+          <div class="reservation-toggle-row-info"><span style="font-size:22px">⚽</span>
+            <div><div class="reservation-toggle-label">Tenho bola</div><div class="reservation-toggle-subtitle">Você leva a bola para a partida</div></div>
+          </div>
+          <div class="reservation-toggle" id="reservation-toggle-bola"><div class="reservation-toggle-k"></div></div>
+          <input type="checkbox" id="reserv-ball" style="display:none;" />
+        </div>
+        <div class="reservation-toggle-row">
+          <div class="reservation-toggle-row-info">
+            <div><div class="reservation-toggle-label">Pessoas comigo</div><div class="reservation-toggle-subtitle">Além de você — total: <span id="total-pessoas">1 pessoa</span></div></div>
+          </div>
+          <div class="reservation-stepper">
+            <button type="button" class="reservation-stepper-button" id="button-players-dec">
+              <span style="font-size: 14px;">➖</span>
+            </button>
+            <span class="reservation-stepper-value" id="val-pessoas">0</span>
+            <button type="button" class="reservation-stepper-button" id="button-players-inc">
+              <span style="font-size: 16px;">➕</span>
+            </button>
+            <input type="hidden" id="reserv-people" value="0">
+          </div>
+        </div>
+      </div>
+
+      <div class="reservation-form-container">
+        <div class="reservation-toggle-row" id="reservation-toggle-row-more" style="margin-bottom: 0;">
+          <div class="reservation-toggle-row-info">
+            <div class="reservation-icon" style="background:#FFF3E0">
+              <span style="font-size: 15px;">👥</span>
+            </div>
+            <div><div class="reservation-toggle-label">Aceitar mais jogadores?</div><div class="reservation-toggle-subtitle">Permitir que outros entrem na partida</div></div>
+          </div>
+          <div class="reservation-toggle" id="reservation-toggle-more"><div class="reservation-toggle-k"></div></div>
+          <input type="checkbox" id="reserv-more" style="display:none;" />
+        </div>
+        <div class="reservation-toggle-more" id="more-sec" style="display: none;">
+          <div class="reservation-toggle-row" style="background:#FFF8F0;border:1.5px solid #FDE68A">
+            <div><div class="reservation-toggle-label" style="color:#92400E">Máximo de jogadores</div><div class="reservation-toggle-subtitle" style="color:#D97706">Incluindo você e seu grupo</div></div>
+            <div class="reservation-stepper">
+              <button type="button" class="reservation-stepper-button" id="button-maxpeople-dec"><span style="font-size: 14px;">➖</span></button>
+              <span class="reservation-stepper-value" id="val-max-pessoas">5</span>
+              <button type="button" class="reservation-stepper-button" id="button-maxpeople-inc"><span style="font-size: 16px;">➕</span></button>
+              <input type="hidden" id="reserv-max-people" value="5">
+            </div>
+          </div>
+          <div class="login-page-container" style="margin-top: 12px;">
+            <label class="reservation-message-label">
+              <span style="font-size: 14px; margin-right: 4px;">💬</span> Mensagem <span style="color:#9CA3AF;font-weight:400">(opcional)</span>
+            </label>
+            <textarea id="reserv-invite-text" class="reservation-message-textarea" placeholder="Ex: Vem jogar! Nível iniciante, todos bem-vindos 🏀" maxlength="200"></textarea>
+            <div class="reservation-message-textarea-container" id="reservation-message-textarea-container">0/200</div>
+          </div>
+          <label class="reservation-mail-label" id="reservation-mail-label">
+            <input type="checkbox" id="reserv-mail" />
+            <div class="reservation-mail-content">
+              <div class="reservation-mail-title"><span style="font-size: 16px; margin-right: 4px;">📱</span> Notificar via E-mail</div>
+              <p>Outros usuários receberão uma notificação sobre esta vaga.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="green-button button-lg" id="res-submit" style="margin-top: 24px;">
+        Confirmar Reserva ✓
+      </button>
+    </form>
+  </div>
+
+
+</body>
+</html>

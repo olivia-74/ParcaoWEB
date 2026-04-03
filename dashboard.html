@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcão WEB - Quadras</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+  <div class="container-wrap">
+    
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-box">
+          <span style="font-size: 18px;">🍃</span>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <span class="logo-txt">Parcão <span class="logo-sub">WEB</span></span>
+          <span style="font-size: 10px; color: rgba(255,255,255,.45); margin-top: 2px;">um projeto por Olivia D.S</span>
+        </div>
+      </div>
+      
+      <div class="sidebar-user">
+        <div class="sidebar-user-avatar" id="user-avatar"></div>
+        <div>
+          <div class="sidebar-user-name" id="user-fullname">Carregando...</div>
+          <div class="sidebar-profile">Ver perfil</div>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-label">Menu</div>
+        <a href="dashboard.html" class="sidebar-page active">
+          <span style="font-size: 20px;">🏟️</span>
+          <span>Quadras</span>
+        </a>
+        <a href="minhas-reservas.html" class="sidebar-page">
+          <span style="font-size: 20px;">📅</span>
+          <span>Minhas Reservas</span>
+        </a>
+      </nav>
+      
+      <div class="sidebar-bottom">
+        <button class="sidebar-logout" onclick="logout()">
+          <span style="font-size: 18px;">🚪</span>
+          <span>Sair</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Mobile -->
+    <div class="main">
+      <header class="main-topbar">
+        <div class="main-logo">
+            <span style="font-size: 14px;">🍃</span>
+          <div style="display: flex; flex-direction: column;">
+            <span class="main-logo-txt">Parcão <span style="color:#2E7D32">WEB</span></span>
+            <span style="font-size: 9px; color: #9CA3AF; margin-top: 1px;">um projeto por Olivia D.S</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-wrap">
+        <div class="dash">
+          <div class="page-header">
+            <h1 class="page-title">Olá, <span id="users-name">Jogador</span>! 👋</h1>
+            <p class="page-subtitle">Veja o estado das quadras agora e faça sua reserva.</p>
+          </div>
+          <div class="court-grid" id="court-grid"></div> 
+        </div>
+      </main>
+
+      <nav class="main-nav">
+        <a href="dashboard.html" class="main-nav-button active">
+          <span style="font-size: 20px;">🏟️</span>
+          <span>Quadras</span>
+        </a>
+        <a href="minhas-reservas.html" class="main-nav-button">
+          <span style="font-size: 20px;">📅</span>
+          <span>Minhas Reservas</span>
+        </a>
+        <button onclick="logout()" class="main-nav-button">
+          <span style="font-size: 20px;">🚪</span>
+          <span>Sair</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+</body>
+</html>
